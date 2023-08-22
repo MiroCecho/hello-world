@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
 })
 export class RendererComponent {
   curStatus = "draw";
+  count:number=0;
   testClick=()=>{
-    alert("Kruh");
+    let el=document.createElement("button");
+    el.setAttribute("value","testík");
+    
   }
 }
