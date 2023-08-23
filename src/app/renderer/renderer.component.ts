@@ -37,6 +37,6 @@ export class RendererComponent implements OnInit {
     el.addEventListener("pointerdown",this.urobHaloo);
   }
   urobHaloo=()=>{
-    alert("halooo");
+    alert("halooo bdhesdgshbb");
   }
 }
