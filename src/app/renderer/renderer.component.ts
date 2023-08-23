@@ -34,5 +34,9 @@ export class RendererComponent implements OnInit {
   testClick=()=>{
     let el=this.CreateSvgObject("circle",{cx:50,cy:150, r:40,stroke:"black","stroke-width":"3",fill:"orange"});
     this.svgContainer.nativeElement.appendChild(el);
+    el.addEventListener("pointerdown",this.urobHaloo);
+  }
+  urobHaloo=()=>{
+    alert("halooo");
   }
 }
