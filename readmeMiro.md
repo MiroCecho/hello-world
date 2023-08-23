@@ -14,3 +14,6 @@ ng g s [názov servisu v názve netreba pridať ".service" spraví automaticky]
 
 dependency injection
 v app.modeule.ts do property providers
+
+### oprava debugu
+    https://stackoverflow.com/questions/72203399/why-am-i-suddenly-getting-could-not-read-source-map-in-vscode-using-angular-wi
