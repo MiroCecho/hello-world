@@ -1,0 +1,135 @@
+*{
+    font-family: 'Roboto', sans-serif;
+  }
+  html,body,main{
+    margin: 0;
+    top: 0;
+    left: 0;
+    /* font-family: 'Roboto', sans-serif; */
+  
+    /* background-color:cornsilk;  */
+  }
+  a{
+    text-decoration: wavy;
+  }
+  header{
+    height: 50px;
+    padding:5px;
+    border: 1px solid gray;
+    background: linear-gradient(#E8E8E8,#E8E8E8, #CEE5ED);
+    touch-action: none;
+    border-radius: 3px;
+    
+  }
+  .hide{
+    display: none;
+  }
+  .show{
+    display: block;
+  }
+.tippy-tooltip.tomato-theme {
+    background-color: tomato;
+    color: yellow;
+  }
+  .disable-select {
+    -ms-user-select: none; /* supported by Chrome and Opera */
+    -webkit-user-select: none; /* Safari */
+    user-select: none; /* IE 10 and IE 11 */
+  }
+  #btInit{
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .insertNav{
+    text-align: center;
+    margin: 5px;
+  }
+  .mobile-nav input{ margin: 5px;}
+  
+  .btn{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  .con-nav{
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 128px;
+    padding-right: 128px;
+    display: flex;
+    align-items: center;
+  
+  
+    @media (max-width: 1460px) {
+          padding-left: 64px;
+          padding-right: 64px;
+      }
+  
+      @media (max-width: 1330px) {
+          padding-left: 32px;
+          padding-right: 32px;
+      }
+  }
+  .hamburger {
+      position: relative;
+      display: block;
+      width: 35px;
+      cursor: pointer;
+  
+      appearance: none;
+      background: none;
+      outline: none;
+      border: none;
+  }
+  
+  .hamburger .bar, .hamburger:after, .hamburger:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 5px;
+      background-color: #000;
+      margin: 6px 0px;
+      transition: 0.4s;
+    border-radius: 3px;
+  }
+  
+  .hamburger.is-active:before {
+      transform: rotate(-45deg) translate(-8px, 6px);
+  }
+  
+  .hamburger.is-active:after {
+      transform: rotate(45deg) translate(-9px, -8px);
+  }
+  
+  .hamburger.is-active .bar {
+      opacity: 0;
+  }
+  .mobile-nav {
+      position: fixed;
+      top: 50;
+      left: 100%;
+      width: 15%;
+      min-height: 100vh;
+      display: flex;
+    flex-direction: column;
+      z-index: 98;
+      background: linear-gradient(#CEE5ED80,#FFEBCD80,#FFEBCD80,#FFEBCD80);
+    /* opacity: 0.5; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+      padding-top: 10px;
+      transition: 0.4s;
+  
+    box-shadow: -5px 0 5px -5px #333;
+  
+  }
+  /* @media (max-width:1080px) {
+    .mobile-nav{
+      width: 150px;
+    }
+  } */
+  .mobile-nav button{
+    margin: 10px;
+  }
+  
+  .mobile-nav.is-active {
+      left: 85%;
+  }

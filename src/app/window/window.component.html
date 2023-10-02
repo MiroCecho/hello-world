@@ -1,0 +1,11 @@
+<!-- <div class="window" (mousedown)="onMouseDown($event)" [ngStyle]="windowStyles"> -->
+<div class="window" *ngIf="showWindow" (mousedown)="startDragging($event)" (mouseup)="stopDragging()" [style.left.px]="offsetX" [style.top.px]="offsetY">
+    <!-- <app-level-manager></app-level-manager> -->
+    <div class="headerW">
+        <button (click)="toggleWindow()" >Zavriet</button>
+    </div>
+    <div class="contentW">
+        <app-level-manager></app-level-manager>
+    </div>
+</div>
+<button (click)="toggleWindow()" *ngIf="!showWindow">Zobrazit okno</button>

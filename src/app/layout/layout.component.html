@@ -1,0 +1,25 @@
+<!-- <p>layout works!</p> -->
+<header style="display: flex;">
+    <button type="button" class="btn btn-primary show" id="btInit" style="float: left;">Init</button>
+    <button type="button" class="btn btn-primary show" id="btTest" style="float: left;">Test</button>
+    <button type="button" class="btn btn-primary show" id="btDrawingInfo" style="float: left;">drawing-info</button>
+    <div id="drawing-info" style="padding-left: 10px;width:100%"></div>
+    <div id="custom-content" class="con-nav" style="display: flex; justify-content: flex-end;">
+      <div style="margin-right: 50px;" class="search hide" id="custom-search-by-criteria">
+        <div class="search-icon"></div>
+        <div class="search-input">
+          <input type="text" placeholder="Vyhľadať" id="mySearch">
+        </div>
+        <span class="search-clear" onclick="document.getElementById('mySearch').value = ''"></span>
+      </div>
+      <button class="hamburger hide" style="float: right;" (click)="toggleMenu()" #menuButton>
+        <div class="bar"></div>
+      </button>
+    </div>
+    <!-- <button (click)="openWindow( )">Open Window</button> -->
+</header>
+<nav id="navigation-panel" class="mobile-nav" [ngClass]="{'is-active': isMobileMenuActive}">
+</nav>
+<!-- <app-renderer></app-renderer> -->
+<!-- <app-level-manager></app-level-manager> -->
+<app-window></app-window>
