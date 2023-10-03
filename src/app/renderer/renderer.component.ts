@@ -1,5 +1,6 @@
-import { Component,OnInit, ViewChild } from '@angular/core';
+import { Component,OnInit, ViewChild,Inject, inject } from '@angular/core';
 
+import { DOCUMENT } from '@angular/common';
 const svgNs: string = "http://www.w3.org/2000/svg";
 
 @Component({
@@ -12,6 +13,11 @@ const svgNs: string = "http://www.w3.org/2000/svg";
 
 export class RendererComponent implements OnInit {
   @ViewChild('svgContainer', { static: true }) public svgContainer: any;
+
+  constructor(@Inject(DOCUMENT) private document:Document){
+
+  }
+
 
   CreateSvgObject(name: string, j: any): HTMLElement {
     const nod: string = name;
@@ -31,12 +37,25 @@ export class RendererComponent implements OnInit {
   
   curStatus = "draw";
   count:number=0;
-  testClick=()=>{
-    let el=this.CreateSvgObject("circle",{cx:50,cy:150, r:40,stroke:"black","stroke-width":"3",fill:"orange"});
-    this.svgContainer.nativeElement.appendChild(el);
-    el.addEventListener("pointerdown",this.urobHaloo);
-  }
-  urobHaloo=()=>{
-    alert("halooo bdhesdgshbb");
+  testClick=(e:any)=>{
+    let t:HTMLElement=e.target;
+    let x=e.clientX;
+    let y=e.clientY;   
+    let prep=false;
+    let elems=[];
+    elems.push(t);
+    while (prep===false){
+      console.log(t.outerHTML);
+      t.style.pointerEvents="none"
+      t= this.document.elementFromPoint(x,y) as any;
+      if(t.nodeName.toLocaleLowerCase()=="svg"){
+        prep=true;
+      } else{
+        elems.push(t);
+      } 
+    }
+    elems.forEach(e => {
+      e.style.pointerEvents="";
+    });
   }
 }
