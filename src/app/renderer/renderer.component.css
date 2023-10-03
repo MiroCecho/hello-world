@@ -7,5 +7,5 @@ main{
    background-color: aquamarine;
 }
 main[cur='draw']{
-   cursor: pointer;
+   cursor: crosshair;
 } 

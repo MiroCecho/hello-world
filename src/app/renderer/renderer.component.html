@@ -1,7 +1,7 @@
 <main [attr.cur]="curStatus">
     <svg class="canvas disable-select" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         width="100%" height="100%">
-        <g id="grf" fill="none" #svgContainer (pointerdown)="testClick($event)">
+        <g id="grf" fill="none" #svgContainer (click)="testClick($event)">
             <circle cx="375.13" cy="357.24" r="198.15"
                 style="stroke:#0f0;stroke-dasharray:10,3,3,3;fill:aqua"></circle>
 

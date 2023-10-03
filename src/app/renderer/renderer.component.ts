@@ -32,7 +32,14 @@ export class RendererComponent implements OnInit {
 
 
   ngOnInit(): void {
-
+    const rect= this.CreateSvgObject("rect",{
+      x:200,y:200,width:280,height:120,style:"fill:green;stroke:red;stroke-width:3;opacity:0.3"
+    })
+    const grf= this.document.getElementById("grf");
+    if(grf){
+      //grf.appendChild(rect)
+      grf.insertBefore(rect,grf.firstChild)
+    }
   }
   
   curStatus = "draw";
