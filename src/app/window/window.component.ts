@@ -11,7 +11,7 @@ export class WindowComponent {
   initialX = 0;
   initialY = 0;
   offsetX = 0;
-  offsetY = 0;
+  offsetY = 62;
 
   toggleWindow(){
     this.showWindow = !this.showWindow;
@@ -30,7 +30,7 @@ export class WindowComponent {
     if(this.isDragging){
       this.offsetX = event.clientX - this.initialX;
       this.offsetY = event.clientY - this.initialY;
-      console.log(this.offsetX);
+      // console.log(this.offsetX);
     }
   }
 

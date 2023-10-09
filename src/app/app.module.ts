@@ -9,6 +9,28 @@ import { LevelManagerComponent } from './level-manager/level-manager.component';
 import { LayoutComponent } from './layout/layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WindowComponent } from './window/window.component';
+import { MatSliderModule, MatSliderThumb } from '@angular/material/slider';
+// import {  MatButtonModule,  MatFormFieldModule,  MatInputModule,  MatRippleModule } from '@angular/material';
+
+// const modules = [
+//   MatSlider,
+//   MatSliderThumb
+// ]
+
+
+// @NgModule({
+//   imports: [
+//     MatSlider,
+//     MatSliderThumb
+//   ],
+//   exports: [
+//     MatSlider,
+//     MatSliderThumb
+//   ],
+//   declarations:[
+//     LevelManagerComponent,
+//   ],
+// })export class MaterialModule {};
 
 @NgModule({
   declarations: [
@@ -23,6 +45,8 @@ import { WindowComponent } from './window/window.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatSliderModule,
+    // LevelManagerComponent,
   ],
   providers: [CoursesService],
   bootstrap: [AppComponent]
