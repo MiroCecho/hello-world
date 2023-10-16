@@ -1,11 +1,16 @@
 <!-- <div class="window" (mousedown)="onMouseDown($event)" [ngStyle]="windowStyles"> -->
+    <!-- <button (click)="toggleWindow()" mat-mini-fab><mat-icon> layers</mat-icon></button> -->
 <div class="window" *ngIf="showWindow"  [style.left.px]="offsetX" [style.top.px]="offsetY">
     <!-- <app-level-manager></app-level-manager> -->
-    <div class="headerW"(mousedown)="startDragging($event)" (mouseup)="stopDragging()">
-        <button (click)="toggleWindow()" >Zavriet</button>
+    <div class="headerW"(mousedown)="startDragging($event)" (mouseup)="stopDragging()" style="padding: 5px;">
+        <button mat-icon-button ><mat-icon style="color: greenyellow">save</mat-icon></button>
+        <button (click)="toggleWindow()" mat-icon-button style="color: red;"><mat-icon>close</mat-icon></button>
+        
     </div>
     <div class="contentW">
-        <app-level-manager></app-level-manager>
+        <!-- <app-level-manager></app-level-manager> -->
+        <app-level-manager-v2></app-level-manager-v2>
     </div>
 </div>
-<button (click)="toggleWindow()" *ngIf="!showWindow">Zobrazit okno</button>
+<!-- <button (click)="toggleWindow()" *ngIf="!showWindow" mat-mini-fab><mat-icon> layers</mat-icon></button> -->
+

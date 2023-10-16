@@ -5,32 +5,17 @@ import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 import { CoursesService } from './course/courses.service';
 import { RendererComponent } from './renderer/renderer.component';
-import { LevelManagerComponent } from './level-manager/level-manager.component';
+import {MatIconModule} from '@angular/material/icon';
 import { LayoutComponent } from './layout/layout.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WindowComponent } from './window/window.component';
 import { MatSliderModule, MatSliderThumb } from '@angular/material/slider';
+import { LevelManagerV2Component } from './level-manager-v2/level-manager-v2.component';
+import { MatButtonModule } from "@angular/material/button";
+import { MatTableModule } from "@angular/material/table";
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import {MatListModule} from '@angular/material/list';
 // import {  MatButtonModule,  MatFormFieldModule,  MatInputModule,  MatRippleModule } from '@angular/material';
-
-// const modules = [
-//   MatSlider,
-//   MatSliderThumb
-// ]
-
-
-// @NgModule({
-//   imports: [
-//     MatSlider,
-//     MatSliderThumb
-//   ],
-//   exports: [
-//     MatSlider,
-//     MatSliderThumb
-//   ],
-//   declarations:[
-//     LevelManagerComponent,
-//   ],
-// })export class MaterialModule {};
 
 @NgModule({
   declarations: [
@@ -38,14 +23,20 @@ import { MatSliderModule, MatSliderThumb } from '@angular/material/slider';
     CoursesComponent,
     CourseComponent,
     RendererComponent,
-    LevelManagerComponent,
+    // LevelManagerComponent,
     LayoutComponent,
-    WindowComponent
+    WindowComponent,
+    LevelManagerV2Component,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    MatIconModule,
+    MatButtonModule,
+    MatTableModule,
+    MatListModule,
     // LevelManagerComponent,
   ],
   providers: [CoursesService],

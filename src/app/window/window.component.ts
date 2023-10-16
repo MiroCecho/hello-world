@@ -1,4 +1,5 @@
 import { Component,ElementRef, HostListener, Renderer2 } from '@angular/core';
+import { WindowService } from '../window.service';
 
 @Component({
   selector: 'app-window',
@@ -6,6 +7,9 @@ import { Component,ElementRef, HostListener, Renderer2 } from '@angular/core';
   styleUrls: ['./window.component.css']
 })
 export class WindowComponent {
+  
+  constructor(private windowService: WindowService) {}
+
   showWindow = false;
   isDragging = false;
   initialX = 0;
@@ -14,7 +18,9 @@ export class WindowComponent {
   offsetY = 62;
 
   toggleWindow(){
-    this.showWindow = !this.showWindow;
+    // this.showWindow = !this.showWindow;
+    this.windowService.toggleWindow();
+    this.showWindow = this.windowService.isWindowOpen();
   }
 
   startDragging(event: MouseEvent){

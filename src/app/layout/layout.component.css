@@ -133,3 +133,9 @@
   .mobile-nav.is-active {
       left: 85%;
   }
+  app-toolbar{
+    position: fixed;
+    float: right;
+    /* left: 95%; */
+    right: 10px;
+  }

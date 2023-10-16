@@ -23,7 +23,7 @@ body {
 .level-manager table th,
 .level-manager table td {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -52,6 +52,7 @@ body {
     height: 15px;
     background: #007bff;
     cursor: pointer;
+    z-index: 150;
 }
 
 .level-manager table td input[type="color"] {
@@ -133,4 +134,25 @@ body {
   mat-slider {
     width: 300px;
   }
+
+  .demo-table {
+    width: 100%;
+  }
   
+  .mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+  
+  .mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
+  
+  mat-slider{
+    z-index: 250;
+  }
