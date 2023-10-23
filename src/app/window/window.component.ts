@@ -8,7 +8,7 @@ import { WindowService } from '../window.service';
 })
 export class WindowComponent {
   
-  constructor(private windowService: WindowService) {}
+  // constructor(private windowService: WindowService) {}
 
   showWindow = false;
   isDragging = false;
@@ -17,10 +17,15 @@ export class WindowComponent {
   offsetX = 0;
   offsetY = 62;
 
+  constructor(private windowService: WindowService){
+    this.windowService.showWindow$.subscribe(show => this.showWindow = show);
+  }
+
   toggleWindow(){
     // this.showWindow = !this.showWindow;
+    console.log("toggle");
     this.windowService.toggleWindow();
-    this.showWindow = this.windowService.isWindowOpen();
+    // this.showWindow = this.windowService.isWindowOpen();
   }
 
   startDragging(event: MouseEvent){

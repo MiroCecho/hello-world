@@ -18,9 +18,10 @@
     </div>
     <!-- <button (click)="openWindow( )">Open Window</button> -->
 </header>
-<nav id="navigation-panel" class="mobile-nav" [ngClass]="{'is-active': isMobileMenuActive}">
-</nav>
+
 <!-- <app-renderer></app-renderer> -->
 <!-- <app-level-manager></app-level-manager> -->
 <app-window></app-window>
-<app-toolbar></app-toolbar>
+<app-toolbar *ngIf="!isMobileMenuActive"></app-toolbar>
+<nav id="navigation-panel" class="mobile-nav" [ngClass]="{'is-active': isMobileMenuActive}">
+</nav>

@@ -156,3 +156,6 @@ body {
   mat-slider{
     z-index: 250;
   }
+  .custom-width{
+    width: 150px;
+  }

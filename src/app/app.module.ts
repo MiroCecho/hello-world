@@ -15,6 +15,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatTableModule } from "@angular/material/table";
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import {MatListModule} from '@angular/material/list';
+import { WindowService } from './window.service';
 // import {  MatButtonModule,  MatFormFieldModule,  MatInputModule,  MatRippleModule } from '@angular/material';
 
 @NgModule({
@@ -39,7 +40,7 @@ import {MatListModule} from '@angular/material/list';
     MatListModule,
     // LevelManagerComponent,
   ],
-  providers: [CoursesService],
+  providers: [CoursesService,WindowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
