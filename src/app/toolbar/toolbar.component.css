@@ -9,11 +9,3 @@ mat-icon {
 .cdk-overlay-container{
     padding: 3px;
 }
-
-button[f="background-black"] {
-    /* background-image: url("images/back-black.svg"); */
-}
-
-button[f="background-white"] {
-    /* background-image: url("images/back-white.svg"); */
-}
