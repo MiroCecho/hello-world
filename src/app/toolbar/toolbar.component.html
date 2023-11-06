@@ -1,12 +1,28 @@
 <mat-list role="list">
-    <mat-list-item role="button"><button mat-mini-fab><mat-icon>zoom_out_map</mat-icon></button></mat-list-item>
-    <mat-list-item role="button"><button mat-mini-fab><mat-icon>aspect_ratio</mat-icon></button></mat-list-item>
-    <mat-list-item role="button"><button mat-mini-fab><mat-icon>compare</mat-icon></button></mat-list-item>
-    <mat-list-item role="button"><button mat-mini-fab><mat-icon>refresh</mat-icon></button></mat-list-item>
-    <mat-list-item role="button"><button mat-mini-fab><mat-icon>exit_to_app</mat-icon></button></mat-list-item>
-    <mat-list-item role="button"><button mat-mini-fab><mat-icon>brightness_medium</mat-icon></button></mat-list-item>
-    <mat-list-item role="button"><button mat-mini-fab (click)="onWindowButtonClick()"><mat-icon>layers</mat-icon></button></mat-list-item>
+    <mat-list-item role="button"><button mat-mini-fab matTooltip=" Vycentrovať " [matTooltipPosition]="'before'" [style.color]="textColor" >
+        <mat-icon>zoom_out_map</mat-icon>
+    </button></mat-list-item>
+    <mat-list-item role="button"><button mat-mini-fab matTooltip="Priblíženie podľa výberu" [matTooltipPosition]="'before'" [style.color]="textColor" >
+        <mat-icon>aspect_ratio</mat-icon>
+    </button></mat-list-item>
+    <mat-list-item role="button"><button mat-mini-fab matTooltip="Farba pozadia" [matTooltipPosition]="'before'" (click)="toggleTextColor()" [style.color]="textColor" >
+        <mat-icon>compare</mat-icon>
+    </button></mat-list-item>
+    <mat-list-item role="button"><button mat-mini-fab matTooltip="Obnoviť" [matTooltipPosition]="'before'" [style.color]="textColor" >
+        <mat-icon>refresh</mat-icon>
+    </button></mat-list-item>
+    <mat-list-item role="button"><button mat-mini-fab matTooltip="Export do súboru" [matTooltipPosition]="'before'" [style.color]="textColor" >
+        <mat-icon>exit_to_app</mat-icon>
+    </button></mat-list-item>
+    <mat-list-item role="button"><button mat-mini-fab matTooltip="Čierno-bielo/farebne" [matTooltipPosition]="'before'" [style.color]="textColor" >
+        <mat-icon>brightness_medium</mat-icon>
+    </button></mat-list-item>
+    <mat-list-item role="button"><button mat-mini-fab matTooltip="Zoznam vrstviev" [matTooltipPosition]="'before'" (click)="onWindowButtonClick()" [style.color]="textColor" >
+        <mat-icon>layers</mat-icon>
+    </button></mat-list-item>
     <!-- <mat-list-item role="button"><app-window></app-window></mat-list-item> -->
-    <mat-list-item role="button"><button mat-mini-fab><mat-icon>edit</mat-icon></button></mat-list-item>
+    <mat-list-item role="button"><button mat-mini-fab matTooltip="Redline" [matTooltipPosition]="'before'" [style.color]="textColor" >
+        <mat-icon>edit</mat-icon>
+    </button></mat-list-item>
 </mat-list>
 <!-- <app-window></app-window> -->

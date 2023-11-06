@@ -15,8 +15,6 @@ export class LayoutComponent{
   isMobileMenuActive = false;
 
   ngAfterContentInit(): void {
-    //Called after ngOnInit when the component's or directive's content has been initialized.
-    //Add 'implements AfterContentInit' to the class.
     this.menuButton.nativeElement.classList.add('is-active');
     this.customContent.nativeElement.addEventListener('click', this.toggleMenu.bind(this));
   }

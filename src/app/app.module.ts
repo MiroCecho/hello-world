@@ -16,6 +16,8 @@ import { MatTableModule } from "@angular/material/table";
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import {MatListModule} from '@angular/material/list';
 import { WindowService } from './window.service';
+import { TooltipPosition, MatTooltipModule } from '@angular/material/tooltip'
+import { NgFor } from '@angular/common';
 // import {  MatButtonModule,  MatFormFieldModule,  MatInputModule,  MatRippleModule } from '@angular/material';
 
 @NgModule({
@@ -38,6 +40,9 @@ import { WindowService } from './window.service';
     MatButtonModule,
     MatTableModule,
     MatListModule,
+    NgFor,
+    MatTooltipModule,
+    
     // LevelManagerComponent,
   ],
   providers: [CoursesService,WindowService],

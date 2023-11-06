@@ -1,6 +1,19 @@
-mat-icon{
+mat-icon {
     padding: 5px;
 }
-.mdc-list-item__content{
+
+.mdc-list-item__content {
     padding: 5px;
+}
+
+.cdk-overlay-container{
+    padding: 3px;
+}
+
+button[f="background-black"] {
+    /* background-image: url("images/back-black.svg"); */
+}
+
+button[f="background-white"] {
+    /* background-image: url("images/back-white.svg"); */
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WindowService } from '../window.service';
+import { TooltipPosition } from '@angular/material/tooltip'
 // import { WindowComponent } from '../window/window.component';
 
 @Component({
@@ -9,6 +10,14 @@ import { WindowService } from '../window.service';
 })
 export class ToolbarComponent {
   constructor(private windowService: WindowService){}
+
+  // positionOption: TooltipPosition[] = ['before'];
+
+  public textColor = 'black';
+  
+  public toggleTextColor(){
+    this.textColor = this.textColor === 'black' ? 'white' : 'black';
+  }
 
   onWindowButtonClick(){
     this.windowService.toggleWindow();
